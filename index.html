@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <title>Magic Button</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            background-color: #050310;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        button {
+            width: 500px;
+            height: 200px;
+            margin: auto;
+            color: black;
+            font-size: 70px;
+            background-color: #BCFD4C;
+            font-family: 'Bebas Neue', cursive;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #A0AECD;
+        }
+
+        #text {
+            text-align: center;
+            color: transparent;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            font-family: "Poppins", sans-serif;
+            font-size: 110px;
+            letter-spacing: 0.05em;
+            background: linear-gradient(#fd004c 16.7%,
+                    #fe9000 16.7%,
+                    #fe9000 33.4%,
+                    #fff020 33.4%,
+                    #fff020 50.1%,
+                    #3edf4b 50.1%,
+                    #3edf4b 66.8%,
+                    #3363ff 66.8%,
+                    #3363ff 83.5%,
+                    #b102b7 83.5%);
+            -webkit-text-stroke: 0.04em #ffffff;
+            -webkit-background-clip: text;
+            background-clip: text;
+            line-height: 1.1em;
+            animation: rainbow 50s linear infinite;
+        }
+
+        @keyframes rainbow {
+            100% {
+                background-position: 0 30em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button>CLICK HERE</button>
+    </div>
+
+
+    <script>
+        let button = document.querySelector('button');
+
+        function sayThat() {
+            document.body.innerHTML = `<h1 id="text">${'Zitel is Gay'}</h1>`;
+        }
+
+        button.addEventListener('click', () => {
+            sayThat();
+        })
+
+    </script>
+
+</body>
+
+</html>
